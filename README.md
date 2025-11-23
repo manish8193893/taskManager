@@ -355,5 +355,4 @@ POV: member
 ### Sign Up Page
 ![Sign Up Page](./frontend/screenshorts/signup.png)
 
-## © Copyright
 **© 2025 All right reserved. ~ This project is Designed and Developed by `Manish Kumar`.**
