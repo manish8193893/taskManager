@@ -35,7 +35,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/reports', reportRoutes);
 
 // Server upload folder
-app.use("/uploads",express.static(path.join(__dirname,"uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Simple error handler to return cleaner errors for multer and other issues
 app.use((err, req, res, next) => {
