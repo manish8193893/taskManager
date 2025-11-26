@@ -11,11 +11,15 @@ router.post("/login", loginUser);
 router.get("/profile", protect, getUserProfile);
 router.put("/profile", protect, updateUserProfile);
 
+// Route for getting user profile by ID
 router.post("/upload-image", upload.single("image"), (req, res) => {
     if (!req.file) {
         return res.status(400).json({ message: "No file uploaded" });
     }
+
+    // Always return HTTPS URL (fix mixed content issue)
     const imageUrl = `https://${req.get("host")}/uploads/${req.file.filename}`;
+
     res.status(200).json({ imageUrl });
 });
 
